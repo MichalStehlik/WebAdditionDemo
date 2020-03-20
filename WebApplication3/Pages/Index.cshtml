@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>@Model.Input.Result</p>
+        <p>@Model.Input.LastA</p>
+        <form method="post" class="">
+            <div class="form-group">
+                <label class="" asp-for="Input.A"></label>
+                <input type="number" max="100" min="0" class="form-control" asp-for="Input.A" />
+                <span asp-validation-for="Input.A" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="" asp-for="Input.B"></label>
+                <input class="form-control" asp-for="Input.B" />
+                <span asp-validation-for="Input.B" class="text-danger"></span>
+            </div>
+            <button type="submit">Add</button>
+        </form>
+    </div>
